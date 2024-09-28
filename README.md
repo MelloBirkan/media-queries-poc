@@ -124,17 +124,6 @@ Este breakpoint faz várias alterações para dispositivos móveis:
 
 4. **Simplificação do Layout**: À medida que a tela diminui, o layout é simplificado (remoção de imagens, ajuste de margens).
 
-## Pontos Fortes e Oportunidades de Melhoria
-
-### Pontos Fortes
-- Uso eficaz de breakpoints para ajustes graduais.
-- Bom exemplo de simplificação progressiva do layout.
-
-### Oportunidades de Melhoria
-- Poderia incluir mais breakpoints intermediários para uma transição mais suave.
-- Considerar a adição de um menu responsivo (como um menu hamburguer) para telas menores.
-- Utilizar unidades relativas (como `rem`) para melhor escalabilidade.
-
 ## Conclusão
 
 O projeto Bay Bean Co. demonstra uma implementação eficaz da abordagem desktop first no design responsivo. Através do uso estratégico de media queries, o site adapta seu layout e conteúdo para diferentes tamanhos de tela, priorizando a experiência em desktops e fazendo ajustes progressivos para dispositivos menores. Esta abordagem é particularmente útil para sites com conteúdo rico que se beneficiam de uma experiência completa em telas maiores.
@@ -271,8 +260,6 @@ Para aplicar estilos em um breakpoint específico, prefixe a classe com o tamanh
 
 ### 1. Tamanho de Texto Responsivo
 
-
-
 ![explicando](/images/recordaçoes-text-grande.png)
 
 ```html
@@ -342,7 +329,7 @@ As imagens ocupam toda a largura disponível em dispositivos móveis, mantendo u
 
 Este exemplo mostra como você pode adicionar estilos apenas para telas maiores, criando uma experiência mais rica em desktops sem sobrecarregar a versão móvel.
 
-## Pontos-Chave
+### Pontos-Chave
 
 1. **Mobile-First**: Comece com estilos para dispositivos móveis e adicione complexidade para telas maiores.
 2. **Prefixos de Breakpoint**: Use `sm:`, `md:`, `lg:`, `xl:`, e `2xl:` para aplicar estilos em breakpoints específicos.
@@ -358,7 +345,7 @@ Para implementar essas técnicas em seu projeto:
 2. Use as classes responsivas do Tailwind para ajustar o layout conforme necessário para telas maiores.
 3. Teste seu design em vários tamanhos de tela para garantir uma transição suave entre breakpoints.
 
-## Exemplo Visual
+## Exemplo Visual de Mobile First
 
 Para melhor compreensão, aqui está como o layout da seção de recordações muda em diferentes tamanhos de tela:
 

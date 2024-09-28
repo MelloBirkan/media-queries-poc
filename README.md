@@ -59,8 +59,8 @@ Aqui, o elemento terá um padding vertical de 1.25rem (20px) em dispositivos mó
 ### 3. Mudança de Layout Responsiva
 
 <div>
-  <img src="/images/layout-desktop.png" alt="explicando" height="600px">
-  <img src="/images/layout-mobile.png" alt="explicando" height="600px">
+  <img src="/images/layout-desktop.png" alt="explicando" height="405px">
+  <img src="/images/layout-mobile.png" alt="explicando" height="405px">
 </div>
 
 ```html

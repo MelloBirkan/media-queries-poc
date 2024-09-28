@@ -11,86 +11,66 @@
   <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Sistema de Recordações</h2>
   <p class="mt-2 mb-4 text-md leading-8 text-gray-600">Suas memórias filtradas para momentos especiais</p>
 </header>
-
-<section id="forms"
-         class="w-full h-full flex  justify-center gap-7 flex-col mx-auto px-3 md:flex-row md:justify-evenly md:mx-0">
-  <section id="add-form" class="flex flex-col space-y-3 md:w-96">
-    <input type="text" name="photo-input" id="photo-input"
-           class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
-           placeholder="URL da imagem"/>
-
-    <input type="text" name="tag-input" id="tag-input"
-           class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
-           placeholder="TAG"/>
-
-    <input type="date" name="date-input" id="date-input"
-           class="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6 placeholder:text-gray-400"
-           placeholder="Data"/>
-
-    <button onclick="registrar()" type="button"
-            class="flex items-center gap-x-1.5 rounded-md bg-gray-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600 ">
-      Registrar
-      <svg class="-mr-0.5 h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-        <path fill-rule="evenodd"
-              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-              clip-rule="evenodd"/>
-      </svg>
-    </button>
-  </section>
-
-  <section id="filter-form" class="flex flex-col justify-between space-y-3 md:w-96">
-    <input type="text" name="filter-text" id="filter-text"
-           class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
-           placeholder="filtrar por TAG"/>
-
-    <span class="isolate inline-flex rounded-md shadow-sm justify-center">
-    <button onclick="filterPhotos()" type="button"
-            class="relative inline-flex items-center justify-center rounded-l-md px-3 py-2 text-sm font-semibold text-gray-100 ring-1 ring-inset ring-gray-300 bg-gray-600 hover:bg-gray-500 focus:z-10 w-full">Filtrar</button>
-    <button onclick="cleanFilter()" type="button"
-            class="relative -ml-px inline-flex items-center justify-center rounded-r-md px-3 py-2 text-sm font-semibold text-gray-100 ring-1 ring-inset ring-gray-300 bg-gray-600 hover:bg-gray-500 focus:z-10 w-full">Limpar Filtro</button>
-  </span>
-  </section>
-</section>
-
 <div class="bg-gray-900 py-5 sm:py-12 rounded-tl-3xl rounded-tr-3xl shadow-2xl mt-5 md:h-fit">
   <main class="md:px-8">
     <div class="mx-auto max-w-2xl px-6 mb-4 text-center">
       <h2 class="text-3xl font-bold tracking-tight text-white md:text-4xl">Recordações</h2>
       <p class="mt-4 text-md leading-8 text-gray-400">Essas são as suas recordações, cuidadosamente selecionadas com
         base nos filtros escolhidos.</p>
-
-      <div class="flex gap-3 justify-center mt-3 mb-6 text-gray-300">
-        <p>Filtrar por <span>TAG</span></p>
-        <button id="toggleButton" type="button"
-                class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-gray-200 transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-slate-600 focus:ring-offset-2"
-                role="switch" aria-checked="false">
-          <span id="toggleCircle"
-                class="pointer-events-none relative inline-block h-5 w-5 translate-x-0 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out">
-    <span id="iconOff"
-          class="absolute inset-0 flex h-full w-full items-center justify-center opacity-100 transition-opacity duration-200 ease-in"
-          aria-hidden="true">
-      <svg class="h-3 w-3 text-gray-400" fill="none" viewBox="0 0 12 12">
-        <path d="M4 8l2-2m0 0l2-2M6 6L4 4m2 2l2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round"/>
-      </svg>
-    </span>
-    <span id="iconOn"
-          class="absolute inset-0 flex h-full w-full items-center justify-center opacity-0 transition-opacity duration-100 ease-out"
-          aria-hidden="true">
-      <svg class="h-3 w-3 text-slate-600" fill="currentColor" viewBox="0 0 12 12">
-        <path
-            d="M3.707 5.293a1 1 0 00-1.414 1.414l1.414-1.414zM5 8l-.707.707a1 1 0 001.414 0L5 8zm4.707-3.293a1 1 0 00-1.414-1.414l1.414 1.414zm-7.414 2l2 2 1.414-1.414-2-2-1.414 1.414zm3.414 2l4-4-1.414-1.414-4 4 1.414 1.414z"/>
-      </svg>
-    </span>
-  </span>
-        </button>
-      </div>
     </div>
     <section id="list"
              class="w-full flex flex-col items-center gap-3 md:flex-row md:flex-wrap md:justify-center"></section>
   </main>
-  <footer class="text-center text-gray-400 py-4"></footer>
+  <footer class="text-center text-gray-400 py-4">Final Fantasy 7</footer>
 </div>
-<script src="index.js"></script>
+<script>
+  const list = document.getElementById('list');
+
+  const buildRemembranceList = (photo) => {
+    // Construindo o HTML
+    let html = `
+      <section class="md:bg-gray-800 md:px-3 md:py-5 rounded-2xl">
+        <img class="w-full aspect-square object-cover md:size-72 md:rounded-2xl" src="${photo.url}" />
+        <p class="pl-1 text-md font-semibold leading-8 tracking-tight text-white">${photo.tag}</p>
+        <p class="pl-1 text-sm leading-6 text-gray-500 mb-3">${new Date(photo.date).toLocaleDateString("pt-BR")}</p>
+      </section>`;
+
+    // Concatenando o HTML com o resto da lista
+    list.innerHTML += html;
+  }
+
+  let photos = [{
+    url: "https://cdn.midjourney.com/4014b415-e4aa-448f-9f6a-78b2e1327c67/0_0.png",
+    tag: "Cloud Strife",
+    date: "2000-08-11",
+  }, {
+    url: "https://www.cnet.com/a/img/resize/34fe1a54ec1c129958f1ca7e9fa71b10e4d591de/hub/2024/02/05/1d7f1f40-5b3c-42db-9d21-bf8dbe80cc97/ffvii-rebirth-december-keyart-16x9-png-jpgcopy.jpg?auto=webp&fit=crop&height=675&width=1200",
+    tag: "Final Fantasy 7 Rebirth",
+    date: "2024-02-29",
+  }, {
+    url: "https://gh.cdn.sewest.net/assets/ident/pulse/a218ace0/FFVIIRINTERGRADE_Available_Now-1vq9ttoa5.jpg?quality=65",
+    tag: "Final Fantasy 7 Remake",
+    date: "2020-04-10",
+  }, {
+    url: "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2020/07/final-fantasy-7-party-members-artwork.jpg",
+    tag: "Final Fantasy 7 (OG)",
+    date: "1997-01-31",
+  }, {
+    url: "https://scontent.fcgh15-1.fna.fbcdn.net/v/t39.30808-6/374687907_796256409167381_1206474237528333574_n.jpg?stp=dst-jpg_s1080x2048&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=TnfqKP74BAsQ7kNvgG_z75C&_nc_ht=scontent.fcgh15-1.fna&_nc_gid=Al5hmZ74a7v-uAX5yBhKQdc&oh=00_AYDU9HNTGR66aKPzmICJ9FT685LpvThjF4bFaSWli6ZbrA&oe=66F10AFA",
+    tag: "Final Fantasy 7 Ever Crisis)",
+    date: "2023-09-07",
+  }, {
+    url: "https://sm.ign.com/ign_nordic/review/c/crisis-cor/crisis-core-final-fantasy-7-reunion-review_s594.jpg",
+    tag: "Final Fantasy 7 Crisis Core",
+    date: "2007-09-13",
+  }, {
+    url: "https://cdn.midjourney.com/d9148e38-57ac-4a8b-81fb-0cc74451fa53/0_0.png",
+    tag: "Aerith Gainsborough",
+    date: "1999-02-07",
+  }];
+
+  // Iterando sobre o array de fotos e construindo a lista
+  photos.forEach(photo => buildRemembranceList(photo));
+</script>
 </body>
 </html>

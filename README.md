@@ -133,18 +133,20 @@ O projeto Bay Bean Co. demonstra uma implementação eficaz da abordagem desktop
 ### O que são Media Queries?
 As media queries são uma técnica do CSS que permite aplicar estilos diferentes dependendo do tamanho ou das características do dispositivo do usuário. Elas são ótimas para criar layouts que se adaptam a diferentes tamanhos de tela, como smartphones, tablets e desktops.
 
-#### Exemplo 
+#### Exemplo de Tela Mobile
+![exemplo](/images/tela-mobile.png)
+
+#### Exemplo de Tela Desktop
+![exemplo](/images/tela-desktop.png)
+
+#### Como fazer:
 ``` CSS
 @media (min-width: 768px) {
-    body {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        align-items: center;
-    }
+    /* Aqui vamos colocar o estilo para essa versão */
 }
 
 ```
+
 
 Neste exemplo, o layout muda quando a largura da tela atinge pelo menos 768px (tamanho típico de tablets). O código ajusta a disposição dos elementos para melhor visualização em dispositivos maiores.
 
@@ -167,7 +169,7 @@ O conceito de Mobile First sugere que os sites sejam inicialmente projetados par
 
 ```
 
-(Imagem 1)
+![exemplo](/images/imagemTam100.png)
 
 
 Esse estilo define que as imagens ocupem 100% da largura no mobile, mantendo um formato quadrado.
@@ -182,7 +184,7 @@ Porém, ao aumentar a tela, com a media query, o tamanho é ajustado para uma la
 }
 ```
 
-(Imagem 2)
+![exemplo](/images/imagemMenor.png)
 
 **Formulários Responsivos:**  O formulário se ajusta à largura da tela e não possui um fundo destacado (card), mantendo o design simples e limpo para telas pequenas.
 
@@ -198,7 +200,7 @@ Porém, ao aumentar a tela, com a media query, o tamanho é ajustado para uma la
 }
 
 ```
-(Imagem 3)
+![exemplo](/images/formMobile.png)
 
 
 Em dispositivos maiores, como tablets e desktops, o formulário é colocado dentro de um card com bordas arredondadas e uma sombra para destacar o conteúdo visualmente.
@@ -221,8 +223,7 @@ Em dispositivos maiores, como tablets e desktops, o formulário é colocado dent
 
 ```
 
-(Imagem 4)
-
+![exemplo](/images/formDesktop.png)
 
 
 

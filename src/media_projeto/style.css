@@ -1,0 +1,173 @@
+/* Estilo para Mobile (Mobile First) */
+:root {
+    --figureSize: 150px;
+    --shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.25);
+    --border-radius: 16px;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+#forms {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 90%;
+    gap: 24px;
+    justify-content: center;
+    margin: 12px;
+}
+
+#filter-form,
+#add-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    gap: 5px;
+    
+}
+
+/* ajustes das fotos (no mobile) */
+.card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 20px; /* espaço abaixo do botão */
+}
+
+/*-------------------------------------------------------------*/
+
+/* Media Query do Desktop */
+
+@media (min-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+    
+    h1 {
+        margin-bottom: 0;
+    }
+    
+    #forms {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 24px;
+        justify-content: center;
+        margin: 12px;
+    }
+    
+    #filter-form,
+    #add-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgb(213, 204, 255);
+        width: 600px;
+        max-width: 600px;
+        gap: 12px;
+        padding: 15px;
+        box-shadow: var(--shadow);
+        border-radius: var(--border-radius);
+      
+
+    }
+    
+    #filter-form section {
+        display: flex;
+        gap: 12px;
+    }
+    
+    #filter-form button {
+        flex: 1;
+    }
+    
+    .input-text {
+        flex: 1;
+        max-height: 16px;
+    }
+    
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(254, 193, 247);
+        padding: 12px;
+    }
+    
+    #list {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        gap: 8px;
+    }
+    
+    .card {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding: 8px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+    }
+    
+    .card img {
+        width: var(--figureSize);
+        height: var(--figureSize);
+        object-fit: cover;
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
+    }
+    
+    .card .tag {
+        background-color: #550089;
+        color: #fff;
+        font: italic smaller sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 3px;
+        border-radius: 0; /* Sem borda arredondada para a tag */
+    }
+    
+    .card .data-container {
+        background-color: #550089;
+        padding: 3px;
+        border-radius: 0 0 var(--border-radius) var(--border-radius); /* Borda arredondada só para a parte da data */
+    }
+    
+    .card .data {
+        color: #fff;
+        font: italic smaller sans-serif;
+        text-align: center;
+        margin: 0;
+    }
+    
+}

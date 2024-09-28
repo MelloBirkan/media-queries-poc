@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manipulando Array</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>Sistema de Registro de Fotos</h1>
+    
+    <!-- Seção que agrupa o formulário de adicionar fotos -->
+    <section id="forms">
+      <!-- Adicionar uma nova foto -->
+      <section id="add-form">
+        <input type="text" id="photo-input" placeholder="URL da imagem" class="input-text" />
+        <input type="text" id="tag-input" placeholder="tag" class="input-text" />
+        <input type="text" id="data-input" placeholder="Data (aaaa-mm-dd)" class="input-text" />
+        <button onclick="registrar()">Registrar</button>
+      </section>
+    </section>
+
+    <!-- Onde as fotos serão exibidas -->
+    <main>
+
+
+      <h2>Todos os Doguinhos</h2>
+      <section id="list"></section>
+    </main>
+    
+    <script src="script.js"></script>
+  </body>
+</html>

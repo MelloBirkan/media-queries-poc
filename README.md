@@ -128,27 +128,14 @@ Este breakpoint faz várias alterações para dispositivos móveis:
 
 O projeto Bay Bean Co. demonstra uma implementação eficaz da abordagem desktop first no design responsivo. Através do uso estratégico de media queries, o site adapta seu layout e conteúdo para diferentes tamanhos de tela, priorizando a experiência em desktops e fazendo ajustes progressivos para dispositivos menores. Esta abordagem é particularmente útil para sites com conteúdo rico que se beneficiam de uma experiência completa em telas maiores.
 
-# Media Queries e Mibile First
+# Mobile First
 
-### O que são Media Queries?
-As media queries são uma técnica do CSS que permite aplicar estilos diferentes dependendo do tamanho ou das características do dispositivo do usuário. Elas são ótimas para criar layouts que se adaptam a diferentes tamanhos de tela, como smartphones, tablets e desktops.
-
-#### Exemplo de Tela Mobile
+#### Tela Mobile
 ![exemplo](/images/tela-mobile.png)
 
-#### Exemplo de Tela Desktop
+#### Tela Desktop
 ![exemplo](/images/tela-desktop.png)
 
-#### Como fazer:
-``` CSS
-@media (min-width: 768px) {
-    /* Aqui vamos colocar o estilo para essa versão */
-}
-
-```
-
-
-Neste exemplo, o layout muda quando a largura da tela atinge pelo menos 768px (tamanho típico de tablets). O código ajusta a disposição dos elementos para melhor visualização em dispositivos maiores.
 
 
 ### O que é Mobile First?

@@ -58,6 +58,11 @@ Aqui, o elemento terá um padding vertical de 1.25rem (20px) em dispositivos mó
 
 ### 3. Mudança de Layout Responsiva
 
+<div>
+  <img src="/images/layout-desktop.png" alt="explicando" height="600px">
+  <img src="/images/layout-mobile.png" alt="explicando" height="600px">
+</div>
+
 ```html
 <section id="list" class="w-full flex flex-col items-center gap-3 md:flex-row md:flex-wrap md:justify-center"></section>
 ```
@@ -84,6 +89,8 @@ Este é um exemplo clássico de mudança de layout. Em dispositivos móveis, os 
 As imagens ocupam toda a largura disponível em dispositivos móveis, mantendo uma proporção quadrada. Em telas médias e maiores, elas assumem um tamanho fixo e ganham cantos arredondados.
 
 ### 5. Background e Padding Responsivos
+
+<img src="/images/layout-desktop.png" alt="explicando">
 
 ```html
 <section class="md:bg-gray-800 md:px-3 md:py-5 rounded-2xl">
@@ -137,11 +144,3 @@ Para melhor compreensão, aqui está como o layout da seção de recordações m
 |   4    |   5    |   6    |
 +--------+--------+--------+
 ```
-
-## Dicas Adicionais
-
-1. **Uso de DevTools**: Use as ferramentas de desenvolvedor do navegador para simular diferentes tamanhos de tela e testar seu design responsivo.
-2. **Breakpoints Personalizados**: Se necessário, você pode adicionar breakpoints personalizados no arquivo de configuração do Tailwind.
-3. **Container Queries**: Para designs ainda mais flexíveis, considere usar container queries do Tailwind, que permitem estilos baseados no tamanho do contêiner pai, não apenas na viewport.
-
-Ao aproveitar essas técnicas, você pode criar um design totalmente responsivo que se adapta perfeitamente a vários tamanhos de tela e dispositivos, proporcionando uma experiência de usuário consistente e agradável em todas as plataformas.

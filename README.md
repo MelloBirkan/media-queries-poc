@@ -1,3 +1,101 @@
+# Media Queries e Mibile First
+
+### O que são Media Queries?
+As media queries são uma técnica do CSS que permite aplicar estilos diferentes dependendo do tamanho ou das características do dispositivo do usuário. Elas são ótimas para criar layouts que se adaptam a diferentes tamanhos de tela, como smartphones, tablets e desktops.
+
+#### Exemplo 
+``` CSS
+@media (min-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+}
+
+```
+
+Neste exemplo, o layout muda quando a largura da tela atinge pelo menos 768px (tamanho típico de tablets). O código ajusta a disposição dos elementos para melhor visualização em dispositivos maiores.
+
+
+### O que é Mobile First?
+O conceito de Mobile First sugere que os sites sejam inicialmente projetados para dispositivos móveis e, depois, adaptados para telas maiores com media queries. A ideia é começar com um layout mais simples (para mobile) e, conforme o tamanho da tela aumenta, adicionar elementos ou melhorar a disposição.
+
+#### Exemplos práticos:
+
+**Galeria de imagens:** As fotos são organizadas em uma única coluna no mobile, mas em telas maiores, são exibidas lado a lado, criando uma galeria mais ampla e fácil de visualizar.
+
+``` CSS
+.card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+}
+
+```
+
+(Imagem 1)
+
+
+Esse estilo define que as imagens ocupem 100% da largura no mobile, mantendo um formato quadrado.
+
+Porém, ao aumentar a tela, com a media query, o tamanho é ajustado para uma largura fixa:
+
+``` CSS
+.card img {
+    width: var(--figureSize);
+    height: var(--figureSize);
+    object-fit: cover;
+}
+```
+
+(Imagem 2)
+
+**Formulários Responsivos:**  O formulário se ajusta à largura da tela e não possui um fundo destacado (card), mantendo o design simples e limpo para telas pequenas.
+
+``` CSS
+#forms {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 90%;
+    gap: 24px;
+    justify-content: center;
+    margin: 12px;
+}
+
+```
+(Imagem 3)
+
+
+Em dispositivos maiores, como tablets e desktops, o formulário é colocado dentro de um card com bordas arredondadas e uma sombra para destacar o conteúdo visualmente.
+
+``` CSS
+@media (min-width: 768px) {
+   #filter-form,
+    #add-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 600px;
+        max-width: 600px;
+        gap: 12px;
+        padding: 12px;
+        box-shadow: var(--shadow);
+        border-radius: var(--border-radius);
+    }
+}
+
+```
+
+(Imagem 4)
+
+
+
+
 # Media Queries no Tailwind CSS: Design Responsivo Explicado
 
 Este documento tem como objetivo explicar os conceitos de media queries no Tailwind CSS, focando em partes específicas do site “Sistema de Recordações”. Serão utilizadas imagens e GIFs para demonstrar os exemplos.
